@@ -1,1 +1,1 @@
-# cookiecutter-electron
+# electron-template

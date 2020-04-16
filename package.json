@@ -16,7 +16,8 @@
     "publish": "electron-forge publish",
     "sort": "npx sort-package-json",
     "start": "electron-forge start",
-    "update": "npx npm-check-updates -u"
+    "update": "npx npm-check-updates -u",
+    "fmt": "prettier --write ."
   },
   "config": {
     "forge": {
@@ -71,11 +72,9 @@
     "tabWidth": 2,
     "useTabs": false
   },
-  "jest": {
-    "collectCoverage": true,
-    "coverageDirectory": "reports/tests"
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
   },
-  "dependencies": {},
   "devDependencies": {
     "@electron-forge/cli": "6.0.0-beta.50",
     "@electron-forge/maker-deb": "6.0.0-beta.50",
@@ -84,6 +83,7 @@
     "@electron-forge/maker-zip": "6.0.0-beta.50",
     "@electron-forge/plugin-webpack": "6.0.0-beta.50",
     "@marshallofsound/webpack-asset-relocator-loader": "^0.5.0",
+    "@types/node": "^13.11.1",
     "@typescript-eslint/eslint-plugin": "^2.28.0",
     "@typescript-eslint/parser": "^2.28.0",
     "css-loader": "^3.5.2",

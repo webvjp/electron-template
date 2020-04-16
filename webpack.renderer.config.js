@@ -1,10 +1,11 @@
-const rules = require('./webpack.rules');
-const plugins = require('./webpack.plugins');
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const rules = require('./webpack.rules')
+const plugins = require('./webpack.plugins').default
 
 rules.push({
   test: /\.css$/,
   use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
-});
+})
 
 module.exports = {
   module: {
@@ -12,6 +13,6 @@ module.exports = {
   },
   plugins: plugins,
   resolve: {
-    extensions: ['.js', '.ts', '.jsx', '.tsx', '.css']
+    extensions: ['.js', '.ts', '.jsx', '.tsx', '.css'],
   },
-};
+}

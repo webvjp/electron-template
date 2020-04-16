@@ -20,14 +20,14 @@ module.exports = [
     use: {
       loader: 'ts-loader',
       options: {
-        transpileOnly: true
-      }
-    }
+        transpileOnly: true,
+      },
+    },
   },
   {
-    test: /node_modules[\/\\](iconv-lite)[\/\\].+/,
+    test: /node_modules[/\\](iconv-lite)[/\\].+/,
     resolve: {
-      aliasFields: ['main']
-    }
-  }
-];
+      aliasFields: ['main'],
+    },
+  },
+]
