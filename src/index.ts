@@ -7,8 +7,9 @@ if (require('electron-squirrel-startup')) {
   // eslint-disable-line global-require
   app.quit()
 }
+
 let mainWindow: any = null
-const createWindow = () => {
+const createWindow = (): void => {
   // Create the browser window.
   mainWindow = new BrowserWindow({
     height: 600,
@@ -31,7 +32,7 @@ const createWindow = () => {
 app.on('ready', createWindow)
 
 // Quit when all windows are closed.
-app.on('window-all-closed', () => {
+app.on('window-all-closed', (): void => {
   // On OS X it is common for applications and their menu bar
   // to stay active until the user quits explicitly with Cmd + Q
   if (process.platform !== 'darwin') {
@@ -39,7 +40,7 @@ app.on('window-all-closed', () => {
   }
 })
 
-app.on('activate', () => {
+app.on('activate', (): void => {
   // On OS X it's common to re-create a window in the app when the
   // dock icon is clicked and there are no other windows open.
   if (BrowserWindow.getAllWindows().length === 0) {
