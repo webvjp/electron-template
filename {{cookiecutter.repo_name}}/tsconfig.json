@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "lib": ["dom", "es2019"],
+    "allowJs": true,
+    "module": "commonjs",
+    "strict": false,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "paths": {
+      "*": ["node_modules/*"]
+    }
+  },
+  "include": ["src/**/*"]
+}
